@@ -1,6 +1,12 @@
+## ✨ 소개
+- spring boot with kotlin을 학습하기 위해 와인이라는 주제로 진행한 백엔드 API 개인 토이프로젝트
+
+## ✨ 사용기술
+- spring boot 3.1.2, kotlin, jpa, spring-data-jpa, query-dsl, rest-assured, h2-database
+  
 ## ✨ 특이사항
 
-- 구현한 모든 다수 조회 API 는 요구사항에는 없었지만 앱에서 많이 활용하는 `무한페이징` 방식으로 구현함
+- 구현한 모든 다수 조회 API 는 `무한페이징` 방식으로 구현함
     - 관련 요청 필수 파라미터는 `page` , `size` 입니다.
     - 검색과 복수개의 정렬 및 필터링에 대해서는 QueryDsl을 이용해 동적으로 처리되도록 구현함
 - Exception 처리는 제작한 `CustomException`을 통해 전역으로 처리되도록 구현함
