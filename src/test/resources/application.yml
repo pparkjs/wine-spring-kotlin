@@ -1,0 +1,25 @@
+server:
+  forward-headers-strategy: framework
+spring:
+  datasource:
+    url: jdbc:h2:mem:test;MODE=MySQL
+    username: sa
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    open-in-view: true
+    properties:
+      hibernate:
+        format_sql: true
+        highlight_sql: true
+        default_batch_fetch_size: 100
+
+logging:
+  level:
+    org.springframework.orm.jpa: DEBUG
+    org.springframework.orm.transaction: DEBUG
+    org.apache.coyote.http11: debug
+    org.hibernate.SQL: debug
+    org.hibernate.orm.jdbc.bind: trace # 쿼리 파라미터 로그 남기기
